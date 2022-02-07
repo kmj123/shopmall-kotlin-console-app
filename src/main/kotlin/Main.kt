@@ -1,3 +1,5 @@
+import screen.ShoppingHome
+
 fun main(args: Array<String>) {
     // (1) 인사말 출력
     // (2) 사용자 이름 입력 받기
@@ -32,11 +34,20 @@ fun main(args: Array<String>) {
         println("값을 입력해주세요!")
         selectedCategory = readLine()
     }
+    /*
+     *  (1) main 함수 -> class 함수
+     *  (2) 화면별 클래스 분리 -> 홈, 카테고리 화면
+     *  (3) 선택한 카테고리 상품목록 표시
+     */
+    fun main(args: Array<String>) {
+        val shoppingHome = ShoppingHome()
 
-    if (selectedCategory == "#") {
-        // TODO (1) 장바구니로 이동
-    } else {
-        // TODO (2) 카테고리 상품 목록 보여주기
-        // TODO (3) 카테고리 목록에 없는 경우 처리리
+        if (selectedCategory == "#") {
+            // TODO (1) 장바구니로 이동
+        } else {
+            // TODO (2) 카테고리 상품 목록 보여주기
+            // TODO (3) 카테고리 목록에 없는 경우 처리
+        }
+        shoppingHome.start()
     }
 }
